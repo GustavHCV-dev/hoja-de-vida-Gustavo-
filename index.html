@@ -1,18 +1,3 @@
-<!--
-Proyecto: Portafolio - Gustavo Adolfo Hernández Cera
-Estructura (colocar cada archivo en su ruta indicada):
-
-/mi-portafolio
-│── index.html
-│── sobre-mi.html
-│── proyectos.html
-│── contacto.html
-│── css/estilos.css
-│── js/script.js
-│── img/foto.jpg   (Reemplaza por tu foto)
-│── README.md
-
-<!-- FILE: index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,7 +26,7 @@ Estructura (colocar cada archivo en su ruta indicada):
       <div class="container hero-inner">
         <div class="hero-photo">
           <!-- Reemplaza img/foto.jpg por tu foto real -->
-          <img src="img/foto.jpg" alt="Foto de Gustavo" width="220" height="220">
+          <img src="img/IMG_20250628_122550.jpg" alt="Foto de Gustavo" width="220" height="220">
         </div>
         <div class="hero-text">
           <h1>Gustavo Adolfo Hernández Cera</h1>
@@ -121,57 +106,3 @@ Estructura (colocar cada archivo en su ruta indicada):
 </body>
 </html>
 
-
-<!-- FILE: js/script.js -->
-// Script simple para interacción básica
-document.addEventListener('DOMContentLoaded', function(){
-  // menú móvil
-  var btn = document.querySelector('.menu-toggle');
-  var nav = document.querySelector('.main-nav');
-  if(btn){ btn.addEventListener('click', function(){
-    if(nav.style.display === 'flex') nav.style.display = '';
-    else nav.style.display = 'flex';
-  }); }
-
-  // Formulario contacto - demostración (no envía nada, muestra alerta)
-  var form = document.getElementById('contactForm');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var name = document.getElementById('name').value || 'Amigo';
-      alert('Gracias, ' + name + '. Tu mensaje fue recibido (demo).');
-      form.reset();
-    });
-  }
-
-  // Pequeño efecto al cargar
-  var hero = document.querySelector('.hero');
-  if(hero){ hero.style.transform = 'translateY(6px)'; hero.style.opacity = '0'; setTimeout(function(){ hero.style.transition = 'all 500ms ease'; hero.style.transform='translateY(0)'; hero.style.opacity='1'; }, 80); }
-});
-
-<!-- FILE: README.md -->
-# Portafolio - Gustavo Hernández
-
-Este repositorio contiene un sitio web estático (HTML/CSS/JS) pensado como hoja de vida profesional para presentar a futuros empleadores.
-
-## Estructura
-- `index.html` - Página principal
-- `sobre-mi.html` - Información personal y académica
-- `proyectos.html` - Descripción de proyectos
-- `contacto.html` - Formulario de contacto (demo)
-- `css/estilos.css` - Estilos separados
-- `js/script.js` - Interacciones básicas
-- `img/foto.jpg` - Reemplaza con tu foto real
-
-## Instrucciones para publicar en GitHub Pages
-1. Crea un repositorio público (por ejemplo: `portafolio-gustavo`).
-2. Sube todos los archivos y carpetas tal como están.
-3. En GitHub > Settings > Pages, selecciona la rama `main` y la carpeta `/root`.
-4. Espera unos minutos y accede a `https://<tu-usuario>.github.io/portafolio-gustavo/`.
-
-## Notas
-- Cambia los textos y enlaces con tu información real.
-- Agrega tu foto en `img/foto.jpg`.
-- Si deseas, puedo proporcionarte un archivo ZIP ya listo o los comandos Git para subir (te los doy).
-
-<!-- FIN DEL PROYECTO -->
