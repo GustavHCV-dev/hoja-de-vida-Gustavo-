@@ -1,61 +1,368 @@
+<!--
+Proyecto: Portafolio - Gustavo Adolfo Hernández Cera
+Estructura (colocar cada archivo en su ruta indicada):
+
+/mi-portafolio
+│── index.html
+│── sobre-mi.html
+│── proyectos.html
+│── contacto.html
+│── css/estilos.css
+│── js/script.js
+│── img/foto.jpg   (Reemplaza por tu foto)
+│── README.md
+
+--- Copia cada sección entre los separadores y guarda como archivo independiente ---
+-->
+
+<!-- FILE: index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo Adolfo Hernández Cera - Portafolio</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 60px 20px;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .hero img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 32px;
-            margin: 10px 0 5px 0;
-        }
-        .desc {
-            max-width: 700px;
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portafolio - Gustavo Hernández</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="description" content="Portafolio profesional de Gustavo Hernández - estudiante de Ingeniería de Software">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <h2 class="logo">Gustavo Hernández</h2>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
 
+  <main>
     <section class="hero">
-        <img src= "IMG_20250628_122550.jpg "Foto de Gustavo">
-
-        <h1>Gustavo Adolfo Hernández Cera</h1>
-
-        <div class="desc">
-            Estudiante de Ingeniería de Software (4.º semestre) con conocimientos en 
-            <b>Java, Python, JavaScript, MySQL, SQL, JMeter y Selenium</b>.<br><br>
-            Habilidades en análisis de datos, lógica computacional y fundamentos avanzados en 
-            física y matemáticas.  
-            Domino los idiomas <b>inglés y francés (B2)</b> y me destaco por mi responsabilidad, 
-            puntualidad y trabajo en equipo.  
-            Motivado por mejorar cada día y seguir creciendo como desarrollador.
+      <div class="container hero-inner">
+        <div class="hero-photo">
+          <!-- Reemplaza img/foto.jpg por tu foto real -->
+          <img src="img/foto.jpg" alt="Foto de Gustavo" width="220" height="220">
         </div>
+        <div class="hero-text">
+          <h1>Gustavo Adolfo Hernández Cera</h1>
+          <p class="lead">Estudiante de Ingeniería de Software (4.º semestre) • Java • Python • MySQL • JavaScript</p>
+          <p class="small">Apasionado por la lógica, análisis de datos y desarrollo de aplicaciones. Inglés y francés (B2).</p>
+          <div class="hero-cta">
+            <a class="btn" href="sobre-mi.html">Ver más</a>
+            <a class="btn outline" href="proyectos.html">Mis proyectos</a>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section class="highlights container">
+      <article class="card">
+        <h3>Educación</h3>
+        <p>Ingeniería de Software — Universidad (4.º semestre)</p>
+      </article>
+      <article class="card">
+        <h3>Habilidades</h3>
+        <p>Java, Python, JavaScript, MySQL, JMeter, Selenium, Git, HTML/CSS</p>
+      </article>
+      <article class="card">
+        <h3>Contacto</h3>
+        <p>Correo: <a href="mailto:tu.email@ejemplo.com">tu.email@ejemplo.com</a></p>
+      </article>
+    </section>
+
+    <section class="projects-preview container">
+      <h2>Proyectos destacados</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <h4>Mapa Mundi - Exploración</h4>
+          <p>Aplicación Java Swing para explorar continentes y países con búsqueda y detalles.</p>
+          <a href="proyectos.html#mapamundi">Ver proyecto →</a>
+        </article>
+        <article class="project">
+          <h4>Taller Jardinería (SQL)</h4>
+          <p>Consultas, joins, procedimientos y triggers en MySQL sobre un sistema de jardinería.</p>
+          <a href="proyectos.html#taller">Ver proyecto →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta container">
+      <h2>¿Quieres ver mi CV completo?</h2>
+      <p>Descárgalo o contáctame para más detalles.</p>
+      <a class="btn" href="https://github.com/tuusuario/portafolio-gustavo" target="_blank">Repositorio en GitHub</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Gustavo Adolfo Hernández</strong>
+        <p>Estudiante de Ingeniería de Software • Portafolio</p>
+      </div>
+      <div>
+        <h4>Enlaces</h4>
+        <nav class="footer-nav">
+          <a href="index.html">Inicio</a>
+          <a href="sobre-mi.html">Sobre mí</a>
+          <a href="proyectos.html">Proyectos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <a href="#">GitHub</a><br>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="container copyright">© 2025 Gustavo Hernández. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
+
+<!-- FILE: sobre-mi.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sobre mí - Gustavo Hernández</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <h2 class="logo">Gustavo Hernández</h2>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html" class="active">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h1>Sobre mí</h1>
+      <p>Soy Gustavo Adolfo Hernández Cera, estudiante de Ingeniería de Software. Tengo experiencia en Java, Python y desarrollo de aplicaciones de escritorio y web.</p>
+
+      <h2>Educación</h2>
+      <table class="info-table">
+        <thead>
+          <tr><th>Año</th><th>Institución</th><th>Título / Actividad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2024 - Presente</td><td>Universidad</td><td>Ingeniería de Software (4.º semestre)</td></tr>
+          <tr><td>2023</td><td>Oracle Academy</td><td>Database Design – English (Certificado)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <li>Java (Swing, OOP)</li>
+        <li>Python</li>
+        <li>JavaScript, HTML, CSS</li>
+        <li>MySQL, diseño de bases de datos</li>
+        <li>Pruebas unitarias (JUnit), JMeter, Selenium</li>
+      </ul>
+
+      <h2>Idiomas</h2>
+      <p>Inglés: B2 • Francés: B2</p>
+
+      <h2>Logros</h2>
+      <ol>
+        <li>Beca universitaria</li>
+        <li>Proyecto Mapa Mundi (Java Swing)</li>
+        <li>Curso completado: Database Design</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Gustavo Hernández</div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- FILE: proyectos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proyectos - Gustavo Hernández</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <h2 class="logo">Gustavo Hernández</h2>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html" class="active">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Proyectos</h1>
+
+    <section id="mapamundi" class="project-detail">
+      <h2>Mapa Mundi - Exploración de Continentes y Países</h2>
+      <p>Proyecto en Java Swing que muestra continentes y países en un mapa, con búsqueda, información y tablas.</p>
+      <ul>
+        <li>Tecnologías: Java, Swing, MySQL</li>
+        <li>Características: Búsqueda, presentación de datos, exportar PDF</li>
+      </ul>
+    </section>
+
+    <section id="taller" class="project-detail">
+      <h2>Taller Jardinería (Base de datos)</h2>
+      <p>Ejercicios de SQL con tablas, joins, procedimientos y triggers usando MySQL.</p>
+      <ul>
+        <li>Tecnologías: MySQL, SQL</li>
+        <li>Características: Procedimientos, vistas, datos de ejemplo</li>
+      </ul>
+    </section>
+
+    <section class="project-list">
+      <h2>Otros proyectos</h2>
+      <div class="projects-grid">
+        <article class="project">
+          <h4>Interfaz NewJFrame - Gestión de Empleados</h4>
+          <p>Interfaz Java Swing para gestionar empleados con exportación a PDF.</p>
+        </article>
+        <article class="project">
+          <h4>Shorts de YouTube - Historia</h4>
+          <p>Idea y guiones para crear contenido corto y atractivo sobre curiosidades históricas.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Gustavo Hernández</div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- FILE: contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto - Gustavo Hernández</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <h2 class="logo">Gustavo Hernández</h2>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="container contact-main">
+    <h1>Contacto</h1>
+    <p>Completa el formulario o usa las redes para comunicarte conmigo.</p>
+
+    <form id="contactForm" class="contact-form">
+      <label for="name">Nombre</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Correo</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Otras formas de contacto</h3>
+      <p>Email: <a href="mailto:tu.email@ejemplo.com">tu.email@ejemplo.com</a></p>
+      <p>GitHub: <a href="#">github.com/tuusuario</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Gustavo Hernández</div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+<!-- FILE: js/script.js -->
+// Script simple para interacción básica
+document.addEventListener('DOMContentLoaded', function(){
+  // menú móvil
+  var btn = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('.main-nav');
+  if(btn){ btn.addEventListener('click', function(){
+    if(nav.style.display === 'flex') nav.style.display = '';
+    else nav.style.display = 'flex';
+  }); }
+
+  // Formulario contacto - demostración (no envía nada, muestra alerta)
+  var form = document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('name').value || 'Amigo';
+      alert('Gracias, ' + name + '. Tu mensaje fue recibido (demo).');
+      form.reset();
+    });
+  }
+
+  // Pequeño efecto al cargar
+  var hero = document.querySelector('.hero');
+  if(hero){ hero.style.transform = 'translateY(6px)'; hero.style.opacity = '0'; setTimeout(function(){ hero.style.transition = 'all 500ms ease'; hero.style.transform='translateY(0)'; hero.style.opacity='1'; }, 80); }
+});
+
+<!-- FILE: README.md -->
+# Portafolio - Gustavo Hernández
+
+Este repositorio contiene un sitio web estático (HTML/CSS/JS) pensado como hoja de vida profesional para presentar a futuros empleadores.
+
+## Estructura
+- `index.html` - Página principal
+- `sobre-mi.html` - Información personal y académica
+- `proyectos.html` - Descripción de proyectos
+- `contacto.html` - Formulario de contacto (demo)
+- `css/estilos.css` - Estilos separados
+- `js/script.js` - Interacciones básicas
+- `img/foto.jpg` - Reemplaza con tu foto real
+
+## Instrucciones para publicar en GitHub Pages
+1. Crea un repositorio público (por ejemplo: `portafolio-gustavo`).
+2. Sube todos los archivos y carpetas tal como están.
+3. En GitHub > Settings > Pages, selecciona la rama `main` y la carpeta `/root`.
+4. Espera unos minutos y accede a `https://<tu-usuario>.github.io/portafolio-gustavo/`.
+
+## Notas
+- Cambia los textos y enlaces con tu información real.
+- Agrega tu foto en `img/foto.jpg`.
+- Si deseas, puedo proporcionarte un archivo ZIP ya listo o los comandos Git para subir (te los doy).
+
+<!-- FIN DEL PROYECTO -->
