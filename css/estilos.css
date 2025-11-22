@@ -73,3 +73,9 @@ a{color:var(--accent)}
   background:#0052a3;
 }
 
+/* Forzar botón azul si el estilo no se está aplicando */
+a.btn {
+  background:#0066cc !important;
+  color:white !important;
+}
+
