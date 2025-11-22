@@ -68,3 +68,8 @@ a{color:var(--accent)}
 
 
 @media(max-width:480px){.container{padding:12px}}
+
+.btn:hover {
+  background:#0052a3;
+}
+
